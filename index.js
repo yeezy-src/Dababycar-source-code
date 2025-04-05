@@ -13,6 +13,8 @@ async function registerCommands() {
     try {
         const command = new SlashCommandBuilder()
             .setName('flood')
+            .setIntegrationTypes(0, 1)
+            .setContexts(0, 1, 2)
             .setDescription('Spams a message every second for 60 seconds')
             .addStringOption(option =>
                 option.setName('message')
